@@ -19,25 +19,36 @@ class _HomePageState extends State<HomePage> {
           children: [
             Text(
               "Entre com seu login:",
-              textAlign: TextAlign.left,
+              style: TextStyle(fontSize: 15.0, fontFamily: 'Sora'),
             ),
             TextField(
-              cursorColor: Colors.white,
-              decoration: InputDecoration(hintText: "Entre aqui!"),
+              style: TextStyle(color: Colors.white),
+              decoration: InputDecoration(
+                  hintStyle: TextStyle(color: Colors.black, fontSize: 14.0),
+                  hintText: "Entre aqui!",
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10.0))),
             ),
             SizedBox(
               height: 30,
             ),
             Text(
               "Password:",
-              textAlign: TextAlign.left,
+              style: TextStyle(
+                fontFamily: 'Sora',
+                fontSize: 15.0,
+              ),
             ),
             TextField(
               obscureText: true,
               enableSuggestions: false,
               autocorrect: false,
               cursorColor: Colors.white,
-              decoration: InputDecoration(hintText: "Digite a sua senha:"),
+              decoration: InputDecoration(
+                  hintText: "Digite a sua senha:",
+                  hintStyle: TextStyle(color: Colors.black, fontSize: 14.0),
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10.0))),
             ),
             SizedBox(
               height: 30,
@@ -46,7 +57,9 @@ class _HomePageState extends State<HomePage> {
               onPressed: () => {debugPrint("Confirmando...")},
               child: Text("Login!"),
               style: TextButton.styleFrom(
-                  backgroundColor: Colors.blue, foregroundColor: Colors.white),
+                  fixedSize: Size.fromWidth(150),
+                  backgroundColor: Colors.blue,
+                  foregroundColor: Colors.white),
             ),
           ],
         ),
