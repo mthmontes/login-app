@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sort_child_properties_last
 
 import 'package:flutter/material.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -61,6 +62,36 @@ class _HomePageState extends State<HomePage> {
                   backgroundColor: Colors.blue,
                   foregroundColor: Colors.white),
             ),
+            SizedBox(
+              height: 30,
+            ),
+            Text(
+              "Login With Google, Twitter or Apple",
+              style: TextStyle(
+                fontFamily: 'Sora',
+                fontSize: 15.0,
+              ),
+            ),
+            SizedBox(
+              height: 20.0,
+            ),
+            Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+              IconButton(
+                onPressed: () => {debugPrint("Using the Google")},
+                icon: Icon(MdiIcons.google),
+                iconSize: 35.0,
+              ),
+              IconButton(
+                onPressed: () => {debugPrint("Using the Twitter")},
+                icon: Icon(MdiIcons.twitter),
+                iconSize: 35.0,
+              ),
+              IconButton(
+                onPressed: () => {debugPrint("Using the Apple")},
+                icon: Icon(MdiIcons.apple),
+                iconSize: 35.0,
+              ),
+            ])
           ],
         ),
       ),
