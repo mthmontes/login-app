@@ -1,5 +1,4 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sort_child_properties_last
-
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
@@ -19,14 +18,14 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "Entre com seu login:",
+              "Enter with you login:",
               style: TextStyle(fontSize: 15.0, fontFamily: 'Sora'),
             ),
             TextField(
               style: TextStyle(color: Colors.white),
               decoration: InputDecoration(
                   hintStyle: TextStyle(color: Colors.black, fontSize: 14.0),
-                  hintText: "Entre aqui!",
+                  hintText: "E-mail",
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0))),
             ),
@@ -46,7 +45,7 @@ class _HomePageState extends State<HomePage> {
               autocorrect: false,
               cursorColor: Colors.white,
               decoration: InputDecoration(
-                  hintText: "Digite a sua senha:",
+                  hintText: "Password",
                   hintStyle: TextStyle(color: Colors.black, fontSize: 14.0),
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0))),
@@ -91,7 +90,17 @@ class _HomePageState extends State<HomePage> {
                 icon: Icon(MdiIcons.apple),
                 iconSize: 35.0,
               ),
-            ])
+            ]),
+            SizedBox(
+              height: 25.0,
+            ),
+            Text(
+              "Forgot my password",
+              style: TextStyle(
+                fontFamily: 'Sora',
+                fontSize: 12.0,
+              ),
+            ),
           ],
         ),
       ),
