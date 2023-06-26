@@ -21,16 +21,20 @@ class _HomePageState extends State<HomePage> {
               "Enter with you login:",
               style: TextStyle(fontSize: 15.0, fontFamily: 'Sora'),
             ),
-            TextField(
-              style: TextStyle(color: Colors.white),
-              decoration: InputDecoration(
-                  hintStyle: TextStyle(color: Colors.black, fontSize: 14.0),
-                  hintText: "E-mail",
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10.0))),
+            Padding(
+              padding: EdgeInsets.all(20),
+              child: TextField(
+                style: TextStyle(color: Colors.white),
+                decoration: InputDecoration(
+                    contentPadding: EdgeInsets.all(10.0),
+                    hintStyle: TextStyle(color: Colors.black, fontSize: 14.0),
+                    hintText: "E-mail",
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20.0))),
+              ),
             ),
             SizedBox(
-              height: 30,
+              height: 20,
             ),
             Text(
               "Password:",
@@ -39,16 +43,20 @@ class _HomePageState extends State<HomePage> {
                 fontSize: 15.0,
               ),
             ),
-            TextField(
-              obscureText: true,
-              enableSuggestions: false,
-              autocorrect: false,
-              cursorColor: Colors.white,
-              decoration: InputDecoration(
-                  hintText: "Password",
-                  hintStyle: TextStyle(color: Colors.black, fontSize: 14.0),
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10.0))),
+            Padding(
+              padding: EdgeInsets.all(20),
+              child: TextField(
+                obscureText: true,
+                enableSuggestions: false,
+                autocorrect: false,
+                cursorColor: Colors.white,
+                decoration: InputDecoration(
+                    contentPadding: EdgeInsets.all(10.0),
+                    hintText: "Password",
+                    hintStyle: TextStyle(color: Colors.black, fontSize: 14.0),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30.0))),
+              ),
             ),
             SizedBox(
               height: 30,
