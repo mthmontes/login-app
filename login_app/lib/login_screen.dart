@@ -24,7 +24,6 @@ class _HomePageState extends State<HomePage> {
             Padding(
               padding: EdgeInsets.all(20),
               child: TextField(
-                style: TextStyle(color: Colors.white),
                 decoration: InputDecoration(
                     contentPadding: EdgeInsets.all(10.0),
                     hintStyle: TextStyle(color: Colors.black, fontSize: 14.0),
