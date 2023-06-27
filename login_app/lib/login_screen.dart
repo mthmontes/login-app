@@ -18,19 +18,18 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
+              textAlign: TextAlign.left,
               "Enter with you login:",
               style: TextStyle(fontSize: 15.0, fontFamily: 'Sora'),
             ),
             Padding(
               padding: EdgeInsets.all(20),
               child: TextField(
-                decoration: InputDecoration(
-                    contentPadding: EdgeInsets.all(10.0),
-                    hintStyle: TextStyle(color: Colors.black, fontSize: 14.0),
-                    hintText: "E-mail",
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(20.0))),
-              ),
+                  decoration: InputDecoration(
+                contentPadding: EdgeInsets.all(10.0),
+                hintStyle: TextStyle(color: Colors.black, fontSize: 14.0),
+                hintText: "E-mail",
+              )),
             ),
             SizedBox(
               height: 20,
@@ -45,17 +44,15 @@ class _HomePageState extends State<HomePage> {
             Padding(
               padding: EdgeInsets.all(20),
               child: TextField(
-                obscureText: true,
-                enableSuggestions: false,
-                autocorrect: false,
-                cursorColor: Colors.white,
-                decoration: InputDecoration(
+                  obscureText: true,
+                  enableSuggestions: false,
+                  autocorrect: false,
+                  cursorColor: Colors.white,
+                  decoration: InputDecoration(
                     contentPadding: EdgeInsets.all(10.0),
                     hintText: "Password",
                     hintStyle: TextStyle(color: Colors.black, fontSize: 14.0),
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(30.0))),
-              ),
+                  )),
             ),
             SizedBox(
               height: 30,
@@ -64,7 +61,7 @@ class _HomePageState extends State<HomePage> {
               onPressed: () => {debugPrint("Confirmando...")},
               child: Text("Login!"),
               style: TextButton.styleFrom(
-                  fixedSize: Size.fromWidth(150),
+                  fixedSize: Size.fromWidth(350),
                   backgroundColor: Colors.blue,
                   foregroundColor: Colors.white),
             ),
