@@ -59,9 +59,10 @@ class _HomePageState extends State<HomePage> {
                   autocorrect: false,
                   cursorColor: Colors.white,
                   decoration: InputDecoration(
-                    suffixIcon: Icon(
-                      Icons.visibility_off,
+                    suffixIcon: IconButton(
+                      icon: Icon(Icons.visibility_off),
                       color: Color(0xffBCB5BF),
+                      onPressed: () => {debugPrint("Confirmado o click!")},
                     ),
                     fillColor: Colors.white,
                     filled: true,
