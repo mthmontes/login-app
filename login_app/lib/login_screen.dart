@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sort_child_properties_last
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sort_child_properties_last, prefer_typing_uninitialized_variables
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -6,6 +6,18 @@ class HomePage extends StatefulWidget {
 
   @override
   State<HomePage> createState() => _HomePageState();
+}
+
+TextEditingController emailController = TextEditingController();
+TextEditingController passController = TextEditingController();
+
+void checkLogin() {
+  var myEmail = emailController.text;
+  var myPassowrd = passController.text;
+
+  if (myEmail == "mthmontess@gmail.com" && myPassowrd == "1234567") {
+    debugPrint("Bem vindo, Matheus!");
+  }
 }
 
 class _HomePageState extends State<HomePage> {
@@ -33,20 +45,21 @@ class _HomePageState extends State<HomePage> {
             Padding(
               padding: EdgeInsets.all(20),
               child: TextField(
+                  controller: emailController,
                   decoration: InputDecoration(
-                filled: true,
-                fillColor: Colors.white,
-                contentPadding: EdgeInsets.all(20.0),
-                hintStyle: TextStyle(
-                    color: Color(0xffBCB5BF),
-                    fontSize: 15.0,
-                    fontFamily: 'Sora'),
-                hintText: "Enter username",
-                border: OutlineInputBorder(
-                  borderSide: BorderSide.none,
-                  borderRadius: BorderRadius.all(Radius.circular(15)),
-                ),
-              )),
+                    filled: true,
+                    fillColor: Colors.white,
+                    contentPadding: EdgeInsets.all(20.0),
+                    hintStyle: TextStyle(
+                        color: Color(0xffBCB5BF),
+                        fontSize: 15.0,
+                        fontFamily: 'Sora'),
+                    hintText: "Enter username",
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide.none,
+                      borderRadius: BorderRadius.all(Radius.circular(15)),
+                    ),
+                  )),
             ),
             SizedBox(
               height: 5,
@@ -54,6 +67,7 @@ class _HomePageState extends State<HomePage> {
             Padding(
               padding: EdgeInsets.all(20),
               child: TextField(
+                  controller: passController,
                   obscureText: true,
                   enableSuggestions: false,
                   autocorrect: false,
@@ -81,7 +95,9 @@ class _HomePageState extends State<HomePage> {
               height: 20,
             ),
             TextButton(
-              onPressed: () => {debugPrint("Confirmando...")},
+              onPressed: () {
+                checkLogin();
+              },
               child: Text("Sign In!"),
               style: TextButton.styleFrom(
                   textStyle: TextStyle(fontFamily: 'Sora', fontSize: 15.0),
