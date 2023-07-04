@@ -15,9 +15,9 @@ void checkLogin() {
   var myEmail = emailController.text;
   var myPassowrd = passController.text;
 
-  if (myEmail == "mthmontess@gmail.com" && myPassowrd == "1234567") {
-    debugPrint("Bem vindo, Matheus!");
-  }
+  myEmail == "mthmontess@gmail.com" && myPassowrd == "1234567"
+      ? debugPrint("Bem vindo, Matheus!")
+      : null;
 }
 
 class _HomePageState extends State<HomePage> {
