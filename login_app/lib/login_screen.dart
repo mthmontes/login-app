@@ -11,6 +11,8 @@ class HomePage extends StatefulWidget {
 TextEditingController emailController = TextEditingController();
 TextEditingController passController = TextEditingController();
 
+bool passwordVisibily = true;
+
 void checkLogin() {
   var myEmail = emailController.text;
   var myPassowrd = passController.text;
@@ -68,15 +70,19 @@ class _HomePageState extends State<HomePage> {
               padding: EdgeInsets.all(20),
               child: TextField(
                   controller: passController,
-                  obscureText: true,
+                  obscureText: passwordVisibily,
                   enableSuggestions: false,
                   autocorrect: false,
                   cursorColor: Colors.white,
                   decoration: InputDecoration(
                     suffixIcon: IconButton(
-                      icon: Icon(Icons.visibility_off),
+                      icon: Icon(passwordVisibily
+                          ? Icons.visibility
+                          : Icons.visibility_off),
                       color: Color(0xffBCB5BF),
-                      onPressed: () => {debugPrint("Confirmado o click!")},
+                      onPressed: () => {
+                        setState(() => passwordVisibily = !passwordVisibily),
+                      },
                     ),
                     fillColor: Colors.white,
                     filled: true,
