@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sort_child_properties_last, prefer_typing_uninitialized_variables
 import 'package:flutter/material.dart';
+import 'package:my_app/second_screen.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -102,7 +103,10 @@ class _HomePageState extends State<HomePage> {
             ),
             TextButton(
               onPressed: () {
-                checkLogin();
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: ((context) => const SecondScreen())));
               },
               child: Text("Sign In!"),
               style: TextButton.styleFrom(
