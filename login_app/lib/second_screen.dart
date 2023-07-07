@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, use_function_type_syntax_for_parameters
 
 import 'package:flutter/material.dart';
+import 'package:my_app/login_screen.dart';
 
 class SecondScreen extends StatelessWidget {
   const SecondScreen({super.key});
@@ -19,7 +20,7 @@ class SecondScreen extends StatelessWidget {
             ),
             IconButton(
               onPressed: () {
-                debugPrint("Ainda não estou retornando pra casa.");
+                Navigator.pop(context);
               },
               icon: Icon(Icons.arrow_back),
             )

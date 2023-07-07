@@ -14,13 +14,11 @@ TextEditingController passController = TextEditingController();
 
 bool passwordVisibily = true;
 
-void checkLogin() {
+checkLogin() {
   var myEmail = emailController.text;
   var myPassowrd = passController.text;
 
-  myEmail == "mthmontess@gmail.com" && myPassowrd == "1234567"
-      ? debugPrint("Bem vindo, Matheus!")
-      : null;
+  myEmail == "mthmontess@gmail.com" && myPassowrd == "1234567" ? "" : false;
 }
 
 class _HomePageState extends State<HomePage> {
@@ -78,8 +76,8 @@ class _HomePageState extends State<HomePage> {
                   decoration: InputDecoration(
                     suffixIcon: IconButton(
                       icon: Icon(passwordVisibily
-                          ? Icons.visibility
-                          : Icons.visibility_off),
+                          ? Icons.visibility_off
+                          : Icons.visibility),
                       color: Color(0xffBCB5BF),
                       onPressed: () => {
                         setState(() => passwordVisibily = !passwordVisibily),
