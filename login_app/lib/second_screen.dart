@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, use_function_type_syntax_for_parameters
+// ignore_for_file: prefer_const_constructors, use_function_type_syntax_for_parameters, unused_import
 
 import 'package:flutter/material.dart';
 import 'package:my_app/login_screen.dart';

@@ -25,14 +25,13 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffD7E7F2),
+      backgroundColor: Color.fromARGB(255, 194, 194, 194),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              textAlign: TextAlign.left,
-              "Hello, Again!",
+              "Hello, Again! 🚀",
               style: TextStyle(fontSize: 30.0, fontFamily: 'Sora'),
             ),
             SizedBox(
@@ -61,9 +60,6 @@ class _HomePageState extends State<HomePage> {
                       borderRadius: BorderRadius.all(Radius.circular(15)),
                     ),
                   )),
-            ),
-            SizedBox(
-              height: 5,
             ),
             Padding(
               padding: EdgeInsets.all(20),
@@ -117,13 +113,11 @@ class _HomePageState extends State<HomePage> {
             SizedBox(
               height: 20.0,
             ),
-            Text(
-              "Or continue with",
-              style: TextStyle(
-                fontFamily: 'Sora',
-                fontSize: 12.0,
-              ),
-            ),
+            Text("Or continue with",
+                style: TextStyle(
+                  fontFamily: 'Sora',
+                  fontSize: 14.0,
+                )),
             SizedBox(
               height: 25.0,
             ),
