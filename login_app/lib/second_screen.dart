@@ -8,10 +8,11 @@ class SecondScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var selectedIndex = 0;
     return Scaffold(
       appBar: AppBar(),
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 0,
+        // currentIndex: 0,
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
@@ -26,6 +27,8 @@ class SecondScreen extends StatelessWidget {
             label: "Settings",
           ),
         ],
+        currentIndex: selectedIndex,
+        selectedItemColor: Colors.blue,
       ),
     );
   }
